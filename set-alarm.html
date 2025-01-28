@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Alarm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="alarm-container">
+        <h1 style="color: rgb(126, 3, 81);"><u>Set Alarm</u></h1>
+
+        <div class="alarm-setup">
+            <label for="alarm-time"><b><u>Set Alarm Time:</u></b></label>
+            <input type="time" id="alarm-time">
+            <button id="save-alarm-btn"><b>Save Alarm</b></button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('save-alarm-btn').addEventListener('click', () => {
+            const alarmTime = document.getElementById('alarm-time').value;
+            if (alarmTime) {
+                localStorage.setItem('alarmTime', alarmTime);
+                alert(`Alarm set for ${alarmTime}`);
+                window.location.href = 'index.html'; // Redirect back to the main page
+            } else {
+                alert("Please select a valid time.");
+            }
+        });
+    </script>
+</body>
+</html>

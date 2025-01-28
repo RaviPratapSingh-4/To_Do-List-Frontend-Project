@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App with Alarm Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="color: rgb(82, 3, 53);"><u>My To-Do List with Alarm</u></h1>
+
+    <!-- Digital Clock Division -->
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+
+    <!-- Display Alarm Time -->
+    <div class="alarm-container">
+        <h2>Alarm</h2>
+        <div id="alarm-time-display"></div>
+    </div>
+
+    <!-- Set Alarm Button -->
+    <div>
+        <button id="set-alarm-btn" onclick="location.href='set-alarm.html'"><b>Set Alarm</b></button>
+    </div>
+
+    <div class="todo-app">
+        <!-- To-Do List Content -->
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+
+        <div class="filters">
+            <button data-filter="all">All</button>
+            <button data-filter="completed">Completed</button>
+            <button data-filter="pending">Pending</button>
+        </div>
+
+        <div class="search-task">
+            <input type="text" id="search-input" placeholder="Search tasks...">
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Display digital clock
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Retrieve alarm time from localStorage and display
+        const alarmTime = localStorage.getItem('alarmTime');
+        const alarmTimeDisplay = document.getElementById('alarm-time-display');
+        if (alarmTime) {
+            alarmTimeDisplay.textContent = `Alarm set for: ${alarmTime}`;
+        }
+    </script>
+</body>
+</html>
