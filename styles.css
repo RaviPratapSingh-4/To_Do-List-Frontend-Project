@@ -1,0 +1,189 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3051a7d5;
+    text-align: center;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+/* Clock Styling */
+.clock-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #282c34;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+#clock {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00d1ff;
+}
+
+/* Alarm Display Styling */
+.alarm-container {
+    margin-top: 20px;
+}
+
+#alarm-time-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #8da40b;
+}
+
+/* To-Do List Styling */
+.todo-app {
+    width: 500px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: rgb(218, 171, 97);
+    border-inline: 5px solid;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-task, .filters, .search-task {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.filters button {
+    margin: 5px;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    position: relative;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+#task-list li .delete-btn {
+    position: absolute;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Set Alarm Button Styling */
+#set-alarm-btn {
+    margin: 15px;
+    padding: 20px 30px;
+    background-color: rgb(165, 175, 19);
+    color: rgb(9, 4, 100);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#set-alarm-btn:hover {
+    background-color: #05a0ed;
+}
+
+/* Alarm Setup Page Styling */
+.alarm-setup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.alarm-setup input[type="time"] {
+    margin: 20px;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.alarm-setup button {
+    padding: 30px 40px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarm-setup button:hover {
+    background-color: #0056b3;
+}
+/* Alarm Container Styling */
+.alarm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgb(165, 175, 19);
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.alarm-setup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.alarm-setup input[type="time"] {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.alarm-setup button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarm-setup button:hover {
+    background-color: #0056b3;
+}
